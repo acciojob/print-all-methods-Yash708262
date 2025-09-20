@@ -1,6 +1,8 @@
 //your JS code here. If required.
 function allMethods() {
-  //write your code here
+   const properties = Object.getOwnPropertyNames(Math);
+	const methods = properties.filter(prop => typeof Math[prop] === "function");
+	return methods.join(", ");
 }
 
 alert(allMethods());
